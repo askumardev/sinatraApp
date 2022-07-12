@@ -14,12 +14,10 @@ end
 
 post '/users' do
   @user = User.find_or_create_by(email: params[:email])
-
   erb :user
 end
 
 get '/users' do
   @users = User.all
-
   erb :users
 end
